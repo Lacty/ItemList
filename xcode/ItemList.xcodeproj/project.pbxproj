@@ -20,6 +20,7 @@
 		ACD41F2F1B5D61BB00DBDA2C /* scene_maker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD41F271B5D61BB00DBDA2C /* scene_maker.cpp */; };
 		ACD41F301B5D61BB00DBDA2C /* scene_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD41F291B5D61BB00DBDA2C /* scene_manager.cpp */; };
 		ACD41F311B5D61BB00DBDA2C /* title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD41F2C1B5D61BB00DBDA2C /* title.cpp */; };
+		ACD97A051B5E3CB500CBDC2D /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD97A031B5E3CB500CBDC2D /* utility.cpp */; };
 		BCC7711480CD4004BFF3A74E /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = E087EA14E1B64F30B281258A /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		ACD41F2A1B5D61BB00DBDA2C /* scene_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene_manager.h; sourceTree = "<group>"; };
 		ACD41F2C1B5D61BB00DBDA2C /* title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = title.cpp; sourceTree = "<group>"; };
 		ACD41F2D1B5D61BB00DBDA2C /* title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = title.h; sourceTree = "<group>"; };
+		ACD97A031B5E3CB500CBDC2D /* utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
+		ACD97A041B5E3CB500CBDC2D /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
 		E087EA14E1B64F30B281258A /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 		EB7BD9C3EADE47E6A9615E42 /* ItemList_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = ItemList_Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +82,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ACD014B51B5E27CC00221E15 /* Utility */,
 				ACD41F241B5D61BB00DBDA2C /* Scene */,
 				25A55107B78140118FDF3D4A /* ItemListApp.cpp */,
 			);
@@ -155,6 +159,16 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACD014B51B5E27CC00221E15 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				ACD97A031B5E3CB500CBDC2D /* utility.cpp */,
+				ACD97A041B5E3CB500CBDC2D /* utility.h */,
+			);
+			name = Utility;
+			path = ../src/Utility;
 			sourceTree = "<group>";
 		};
 		ACD41F241B5D61BB00DBDA2C /* Scene */ = {
@@ -245,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD97A051B5E3CB500CBDC2D /* utility.cpp in Sources */,
 				ACD41F2F1B5D61BB00DBDA2C /* scene_maker.cpp in Sources */,
 				ACD41F2E1B5D61BB00DBDA2C /* scene.cpp in Sources */,
 				ACD41F311B5D61BB00DBDA2C /* title.cpp in Sources */,
