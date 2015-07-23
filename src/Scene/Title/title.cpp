@@ -2,13 +2,16 @@
 #include "title.h"
 #include "cinder/gl/gl.h"
 #include "../../Object/task.h"
+#include "../../Object/Item/item_manager.h"
 
 
 using namespace ci;
 using namespace ci::app;
 
 Title::Title() {
-  font = Font(ci::app::loadAsset("rounded-l-mplus-1c-bold.ttf"), 100);
+  font = Font(loadAsset("rounded-l-mplus-1c-bold.ttf"), 100);
+  Task::getInstance().add("item_manager",
+                          std::make_shared<ItemManager>());
 }
 
 void Title::update() {
@@ -17,5 +20,5 @@ void Title::update() {
 
 void Title::draw() {
   drawObject();
-  gl::drawStringCentered("Title", Vec2f::zero(), Color(1, 1, 1), font);
+  //::drawStringCentered("Title", Vec2f::zero(), Color(1, 1, 1), font);
 }

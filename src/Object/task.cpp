@@ -51,12 +51,14 @@ void Task::update() {
       continue;
     }
     itr->get()->update();
+    cinder::app::console() << "[isAwake:" << itr->get()->isAwake() << "]" << std::endl;
     ++itr;
   }
 }
 
 void Task::draw() {
   for (auto& itr : list) {
+    if (itr->isAwake()) continue;
     itr->draw();
   }
 }

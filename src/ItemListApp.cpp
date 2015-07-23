@@ -66,7 +66,7 @@ void ItemListApp::setup() {
 }
 
 void ItemListApp::update() {
-
+  scene.update();
 }
 
 void ItemListApp::draw() {

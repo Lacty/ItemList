@@ -15,6 +15,13 @@ private:
 
 public:
   Item() = default;
+  Item(const std::string& name,
+       const int& nec,
+       const int& cur) {
+    setName(name);
+    setNecessaryNum(nec);
+    setCurrentNum(cur);
+  }
 
   void setName(const std::string& name);
   void setPos(const ci::Vec2f& pos);

@@ -23,7 +23,7 @@ public:
   void setName(const std::string& str);
   const std::string getName() const;
 
-  virtual void setup()= 0;
+  virtual void setup() = 0;
   virtual void update() = 0;
   virtual void draw() = 0;
 
