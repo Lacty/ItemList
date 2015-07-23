@@ -8,7 +8,7 @@ using namespace ci;
 using namespace ci::app;
 
 Title::Title() {
-  font = Font(ci::app::loadAsset("rounded-l-mplus-1c-bold.ttf"), 50);
+  font = Font(ci::app::loadAsset("rounded-l-mplus-1c-bold.ttf"), 100);
 }
 
 void Title::update() {
@@ -17,5 +17,5 @@ void Title::update() {
 
 void Title::draw() {
   drawObject();
-  gl::drawStringCentered("Title", Vec2f::zero());
+  gl::drawStringCentered("Title", Vec2f::zero(), Color(1, 1, 1), font);
 }

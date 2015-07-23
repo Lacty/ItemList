@@ -75,7 +75,7 @@ void ItemListApp::draw() {
   light->enable();
 
   gl::pushModelView();
-  gl::rotate(rotate);
+  gl::rotate(Vec3f(180, 0, 0));
   scene.draw();
   gl::popModelView();
 }
