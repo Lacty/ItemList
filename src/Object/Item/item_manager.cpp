@@ -7,10 +7,15 @@ using namespace ci::app;
 
 
 ItemManager::ItemManager() {
-  font = Font(loadAsset("rounded-l-mplus-1c-bold.ttf"), 20);
-  items.push_back({ "ボディ2 6s", 5, 1 });
-  items.push_back({ "リアクト2 6s", 10, 3 });
-  items.push_back({ "マインド2 6s", 10, 5 });
+  font = Font(loadAsset("rounded-l-mplus-1c-bold.ttf"), 21);
+  items.push_back({ "ボディ2　6s", 8, 0 });
+  items.push_back({ "リアクト2　6s", 8, 0 });
+  items.push_back({ "マインド2　6s", 8, 0 });
+  items.push_back({ "スピリタ3　6s", 4, 0 });
+  items.push_back({ "ナイト　ウィン　6s", 12, 0 });
+  items.push_back({ "ナイト　6s", 12, 0 });
+  items.push_back({ "スティ　6s", 8, 0 });
+  items.push_back({ "ウィン　スティ　6s", 4, 0 });
 }
 
 Item ItemManager::create() {
