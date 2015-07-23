@@ -4,7 +4,7 @@
 #include <set>
 
 
-class Mouse : private boost::noncopyable {
+class Mouse {
 public:
   struct MouseStatus {
     bool isPush;

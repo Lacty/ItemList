@@ -51,13 +51,14 @@
 		AC19195B1B5F94C10070B4FA /* item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
 		AC7E38A61B60954F0022A2C3 /* mouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mouse.cpp; sourceTree = "<group>"; };
 		AC7E38A71B60954F0022A2C3 /* mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mouse.h; sourceTree = "<group>"; };
+		AC7E38A91B60979A0022A2C3 /* window_size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window_size.h; sourceTree = "<group>"; };
 		ACD41F251B5D61BB00DBDA2C /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		ACD41F261B5D61BB00DBDA2C /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		ACD41F271B5D61BB00DBDA2C /* scene_maker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene_maker.cpp; sourceTree = "<group>"; };
 		ACD41F281B5D61BB00DBDA2C /* scene_maker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene_maker.h; sourceTree = "<group>"; };
 		ACD41F291B5D61BB00DBDA2C /* scene_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene_manager.cpp; sourceTree = "<group>"; };
 		ACD41F2A1B5D61BB00DBDA2C /* scene_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene_manager.h; sourceTree = "<group>"; };
-		ACD41F2C1B5D61BB00DBDA2C /* title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = title.cpp; sourceTree = "<group>"; usesTabs = 0; };
+		ACD41F2C1B5D61BB00DBDA2C /* title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = title.cpp; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		ACD41F2D1B5D61BB00DBDA2C /* title.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = title.h; sourceTree = "<group>"; };
 		ACD97A031B5E3CB500CBDC2D /* utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
 		ACD97A041B5E3CB500CBDC2D /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 		AC7E38A51B60954F0022A2C3 /* MyLib */ = {
 			isa = PBXGroup;
 			children = (
+				AC7E38A91B60979A0022A2C3 /* window_size.h */,
 				AC7E38A61B60954F0022A2C3 /* mouse.cpp */,
 				AC7E38A71B60954F0022A2C3 /* mouse.h */,
 			);

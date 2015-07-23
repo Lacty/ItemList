@@ -1,15 +1,14 @@
 
 #pragma once
-#include "../object.h"
+#include "cinder/gl/gl.h"
 
 
-class Item : public Object {
+using namespace ci;
+
+class Item {
 private:
+  Vec2f pos;
 
 public:
-  Item() = default;
-
-  void setup() final;
-  void update() final;
-  void draw() final;
+  Item();
 };

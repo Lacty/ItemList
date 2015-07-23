@@ -16,8 +16,6 @@ using namespace ci::app;
 
 class ItemListApp : public AppNative {
 private:
-  Vec3f rotate;
-
   Vec3f eye;
   Vec3f target;
   CameraPersp camera;
@@ -50,8 +48,6 @@ void ItemListApp::setup() {
   setWindowSize(int(WindowSize::Width),
                 int(WindowSize::Height));
 
-  rotate = Vec3f(180, 0, 0);
-
   eye = Vec3f(0, 0, 700);
   target = Vec3f::zero();
   camera = CameraPersp(getWindowWidth(), getWindowHeight(),
@@ -70,7 +66,7 @@ void ItemListApp::setup() {
 }
 
 void ItemListApp::update() {
-  //rotate += Vec3f(0.4, 0.6, 0);
+
 }
 
 void ItemListApp::draw() {
