@@ -3,6 +3,7 @@
 #include "cinder/gl/gl.h"
 
 #include "MyLib/mouse.h"
+#include "MyLib/window_size.h"
 
 #include "cinder/Camera.h"
 #include "cinder/gl/Light.h"
@@ -46,6 +47,9 @@ public:
 };
 
 void ItemListApp::setup() {
+  setWindowSize(int(WindowSize::Width),
+                int(WindowSize::Height));
+
   rotate = Vec3f(180, 0, 0);
 
   eye = Vec3f(0, 0, 700);
