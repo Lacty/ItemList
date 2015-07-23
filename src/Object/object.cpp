@@ -2,7 +2,8 @@
 #include "object.h"
 
 
-Object::Object() {}
+Object::Object() :
+state(State::Awake) {}
 
 
 void Object::setState(const State& state) {

@@ -18,6 +18,8 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		AC1919551B5F7D870070B4FA /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC1919531B5F7D870070B4FA /* object.cpp */; };
 		AC1919581B5F8B270070B4FA /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC1919561B5F8B270070B4FA /* task.cpp */; };
+		AC19195C1B5F94C10070B4FA /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC19195A1B5F94C10070B4FA /* item.cpp */; };
+		AC7E38A81B60954F0022A2C3 /* mouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC7E38A61B60954F0022A2C3 /* mouse.cpp */; };
 		ACD41F2E1B5D61BB00DBDA2C /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD41F251B5D61BB00DBDA2C /* scene.cpp */; };
 		ACD41F2F1B5D61BB00DBDA2C /* scene_maker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD41F271B5D61BB00DBDA2C /* scene_maker.cpp */; };
 		ACD41F301B5D61BB00DBDA2C /* scene_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACD41F291B5D61BB00DBDA2C /* scene_manager.cpp */; };
@@ -45,6 +47,10 @@
 		AC1919541B5F7D870070B4FA /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
 		AC1919561B5F8B270070B4FA /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = task.cpp; sourceTree = "<group>"; };
 		AC1919571B5F8B270070B4FA /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = task.h; sourceTree = "<group>"; };
+		AC19195A1B5F94C10070B4FA /* item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		AC19195B1B5F94C10070B4FA /* item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
+		AC7E38A61B60954F0022A2C3 /* mouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mouse.cpp; sourceTree = "<group>"; };
+		AC7E38A71B60954F0022A2C3 /* mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mouse.h; sourceTree = "<group>"; };
 		ACD41F251B5D61BB00DBDA2C /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		ACD41F261B5D61BB00DBDA2C /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		ACD41F271B5D61BB00DBDA2C /* scene_maker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene_maker.cpp; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AC7E38A51B60954F0022A2C3 /* MyLib */,
 				AC1919521B5F7D870070B4FA /* Object */,
 				ACD014B51B5E27CC00221E15 /* Utility */,
 				ACD41F241B5D61BB00DBDA2C /* Scene */,
@@ -171,6 +178,7 @@
 		AC1919521B5F7D870070B4FA /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				AC1919591B5F94C10070B4FA /* Item */,
 				AC1919561B5F8B270070B4FA /* task.cpp */,
 				AC1919571B5F8B270070B4FA /* task.h */,
 				AC1919531B5F7D870070B4FA /* object.cpp */,
@@ -178,6 +186,25 @@
 			);
 			name = Object;
 			path = ../src/Object;
+			sourceTree = "<group>";
+		};
+		AC1919591B5F94C10070B4FA /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				AC19195A1B5F94C10070B4FA /* item.cpp */,
+				AC19195B1B5F94C10070B4FA /* item.h */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		AC7E38A51B60954F0022A2C3 /* MyLib */ = {
+			isa = PBXGroup;
+			children = (
+				AC7E38A61B60954F0022A2C3 /* mouse.cpp */,
+				AC7E38A71B60954F0022A2C3 /* mouse.h */,
+			);
+			name = MyLib;
+			path = ../src/MyLib;
 			sourceTree = "<group>";
 		};
 		ACD014B51B5E27CC00221E15 /* Utility */ = {
@@ -280,12 +307,14 @@
 			files = (
 				AC1919551B5F7D870070B4FA /* object.cpp in Sources */,
 				ACD97A051B5E3CB500CBDC2D /* utility.cpp in Sources */,
+				AC19195C1B5F94C10070B4FA /* item.cpp in Sources */,
 				ACD41F2F1B5D61BB00DBDA2C /* scene_maker.cpp in Sources */,
 				ACD41F2E1B5D61BB00DBDA2C /* scene.cpp in Sources */,
 				AC1919581B5F8B270070B4FA /* task.cpp in Sources */,
 				ACD41F311B5D61BB00DBDA2C /* title.cpp in Sources */,
 				ACD41F301B5D61BB00DBDA2C /* scene_manager.cpp in Sources */,
 				3B907955298946B180475E0B /* ItemListApp.cpp in Sources */,
+				AC7E38A81B60954F0022A2C3 /* mouse.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

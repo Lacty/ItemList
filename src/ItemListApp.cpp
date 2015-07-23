@@ -2,6 +2,8 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 
+#include "MyLib/mouse.h"
+
 #include "cinder/Camera.h"
 #include "cinder/gl/Light.h"
 
@@ -26,7 +28,18 @@ private:
 public:
   void setup();
 
-  void mouseDown( MouseEvent event );
+  void mouseDown(MouseEvent event) {
+    Mouse::getInstance().PushEvent(event);
+  }
+  void mouseUp(MouseEvent event) {
+    Mouse::getInstance().PullEvent(event);
+  }
+  void mouseMove(MouseEvent event) {
+    Mouse::getInstance().MoveEvent(event);
+  }
+  void mouseDrag(MouseEvent event) {
+    Mouse::getInstance().MoveEvent(event);
+  }
 
   void update();
   void draw();
@@ -44,15 +57,13 @@ void ItemListApp::setup() {
   light = std::make_unique<gl::Light>(gl::Light::DIRECTIONAL, 0);
   light->setAmbient(Color(0.3, 0.3, 0.3));
   light->setDiffuse(Color(0.8, 0.8, 0.8));
-  light->setDirection(Vec3f::zAxis());
+  light->setDirection(-Vec3f::zAxis());
 
   scene = SceneManager(SceneType::Title);
 
   gl::enable(GL_LIGHTING);
   gl::enableDepthRead();
 }
-
-void ItemListApp::mouseDown( MouseEvent event ) {}
 
 void ItemListApp::update() {
   //rotate += Vec3f(0.4, 0.6, 0);

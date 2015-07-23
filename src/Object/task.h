@@ -16,8 +16,8 @@ private:
 public:
   static Task& getInstance();
 
-  void add(const std::string& name,
-           const std::shared_ptr<Object>& obj);
+  void add(const std::string&,
+           const std::shared_ptr<Object>&);
 
   // タスクを全て消去
   void clear();
