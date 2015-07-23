@@ -13,7 +13,6 @@ void Task::add(const std::string& name,
   obj->setName(name);
   list.emplace_back(obj);
   map.emplace(name, obj);
-  obj->setup();
 }
 
 void Task::clear() {
@@ -40,6 +39,12 @@ void Task::clean() {
 void Task::update() {
   auto itr = list.begin();
   while (itr != list.end()) {
+    if (itr->get()->isAwake()) {
+      itr->get()->setup();
+      itr->get()->setState(Object::State::Active);
+      ++itr;
+      continue;
+    }
     if (itr->get()->isDead()) {
       ++itr;
       Task::getInstance().clean();
