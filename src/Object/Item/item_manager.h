@@ -10,7 +10,7 @@ private:
   std::vector<Item> items;
   ci::Font font;
 
-  Item create();
+  void loadItems();
 
 public:
   ItemManager();

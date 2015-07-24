@@ -1,6 +1,8 @@
 
 #include "item_manager.h"
 #include "cinder/gl/gl.h"
+#include "cinder/Json.h"
+#include <sstream>
 
 using namespace ci;
 using namespace ci::app;
@@ -8,20 +10,21 @@ using namespace ci::app;
 
 ItemManager::ItemManager() {
   font = Font(loadAsset("rounded-l-mplus-1c-bold.ttf"), 21);
-  items.push_back({ "ボディ2　6s", 8, 0 });
-  items.push_back({ "リアクト2　6s", 8, 0 });
-  items.push_back({ "マインド2　6s", 8, 0 });
-  items.push_back({ "スピリタ3　6s", 4, 0 });
-  items.push_back({ "ナイト　ウィン　6s", 12, 0 });
-  items.push_back({ "ナイト　6s", 12, 0 });
-  items.push_back({ "スティ　6s", 8, 0 });
-  items.push_back({ "ウィン　スティ　6s", 4, 0 });
+  loadItems();
 }
 
-Item ItemManager::create() {
-  Item item;
-
-  return item;
+void ItemManager::loadItems() {
+  JsonTree data(loadAsset("data.json"));
+  auto Size = data["Materials"].getNumChildren();
+  for (size_t i = 0; i < Size; ++i) {
+    Item item;
+    std::ostringstream item_num;
+    item_num << "item" << i;
+    item.setName(data["Materials"][item_num.str()]["name"].getValue<std::string>());
+    item.setNecessaryNum(data["Materials"][item_num.str()]["nece"].getValue<int>());
+    item.setCurrentNum(data["Materials"][item_num.str()]["curr"].getValue<int>());
+    items.push_back(item);
+  }
 }
 
 void ItemManager::setup() {
@@ -48,6 +51,7 @@ void ItemManager::draw() {
   for (auto item : items) {
     gl::pushModelView();
     gl::translate(item.getPos());
+    gl::drawCube(Vec3f::zero(), Vec3f(5, 5, 5));
     gl::drawString(item.getName(), Vec2f::zero(),
                    Color(1, 1, 1), font);
 
