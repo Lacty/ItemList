@@ -51,7 +51,6 @@ void Task::update() {
       continue;
     }
     itr->get()->update();
-    cinder::app::console() << "[isAwake:" << itr->get()->isAwake() << "]" << std::endl;
     ++itr;
   }
 }

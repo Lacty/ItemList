@@ -63,6 +63,8 @@ void ItemListApp::setup() {
 
   gl::enable(GL_LIGHTING);
   gl::enableDepthRead();
+  gl::enableAlphaBlending();
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 void ItemListApp::update() {
@@ -78,6 +80,8 @@ void ItemListApp::draw() {
   gl::rotate(Vec3f(180, 0, 0));
   scene.draw();
   gl::popModelView();
+  
+  Mouse::getInstance().flashInput();
 }
 
 CINDER_APP_NATIVE( ItemListApp, RendererGl )
